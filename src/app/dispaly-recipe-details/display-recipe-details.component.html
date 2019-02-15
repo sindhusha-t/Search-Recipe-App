@@ -1,0 +1,27 @@
+<div class="panel panel-default">
+  <div class="panel panel-heading">
+    <b>Recipe Details</b>
+  </div>
+
+  <div class="panel-body">
+    <div class="row" >
+      <div *ngFor="let recipeDetailsEle of recipeDetails.hits; let i= index">
+        <div class="panel panel-default col-md-4" *ngIf="i<10">
+          <div class="panel panel-heading"><b>{{recipeDetails.hits[i].fields.item_name}}</b></div>
+          <div class="panel-body">
+            <table>
+              <tr>
+                <td>Calories: </td>
+                <td>{{recipeDetails.hits[i].fields.nf_calories}}</td>
+              </tr>
+              <tr>
+                <td>Serving Weight(gms): </td>
+                <td>{{recipeDetails.hits[i].fields.nf_serving_weight_grams}}</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+    </div>
+  </div>
+
+</div>
