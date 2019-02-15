@@ -11,6 +11,9 @@ import {LocalStorageService} from './local-storage.service';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ControlMessagesComponent } from './control-messages/control-messages.component';
 import {ValidationService} from './validation.service';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
+import { DisplayRecipeDetailsComponent } from './dispaly-recipe-details/display-recipe-details.component';
+
 
 @NgModule({
   declarations: [
@@ -18,14 +21,16 @@ import {ValidationService} from './validation.service';
     LoginComponent,
     RegisterComponent,
     HomeComponent,
-    ControlMessagesComponent
+    ControlMessagesComponent,
+    DisplayRecipeDetailsComponent
   ],
   imports: [
     BrowserModule,
     routing,
     StorageServiceModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [LocalStorageService, ValidationService],
   bootstrap: [AppComponent]
