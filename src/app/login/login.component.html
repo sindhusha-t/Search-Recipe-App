@@ -1,15 +1,18 @@
 <h2> Login </h2>
-<form [formGroup]="userLoginForm">
+<div class="invalidCredentials" [hidden]="invalidCredentials == null">{{invalidCredentials}}</div>
+<form [formGroup]="userLoginForm" (ngSubmit)="checkValidUser()">
   <div class="form-group">
     <label for="userName">User Name</label>
     <input type="text" formControlName="userName" class="form-control"/>
+    <app-control-messages [control]="f.userName"></app-control-messages>
   </div>
   <div class="form-group">
     <label for="password">Password</label>
     <input type="text" formControlName="password" class="form-control"/>
+    <app-control-messages [control]="f.password"></app-control-messages>
   </div>
   <div class="form-group">
-    <button class="btn btn-primary">Login</button>
+    <button class="btn btn-primary" [disabled]="userLoginForm.invalid" i>Login</button>
     <a routerLink="/register" class="btn btn-link">Register</a>
   </div>
 </form>

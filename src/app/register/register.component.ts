@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {LocalStorageService} from '../local-storage.service';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import { ControlMessagesComponent} from '../control-messages/control-messages.component';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -13,7 +14,7 @@ export class RegisterComponent implements OnInit {
   userRegisterForm: FormGroup;
   submittedForm = false;
 
-  constructor( private localStorage: LocalStorageService, private fb: FormBuilder) {}
+  constructor( private localStorage: LocalStorageService, private fb: FormBuilder, private router: Router) {}
 
 
   ngOnInit() {
@@ -34,6 +35,8 @@ export class RegisterComponent implements OnInit {
     this.submittedForm = true;
     if( this.userRegisterForm.dirty && this.userRegisterForm.valid ) {
       this.localStorage.StoreRegisterDetailsInLocalStorage(this.userRegisterForm);
+
+      this.router.navigate(['/login']);
     }
   }
 
