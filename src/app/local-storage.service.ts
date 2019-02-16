@@ -19,8 +19,8 @@ export class LocalStorageService {
 
   public CheckUserCredentials(fg: FormGroup): boolean {
 
-    if ( this.storage.get('USER_NAME') === JSON.stringify(fg.get('userName').value)  &&
-                 this.storage.get('PASSWORD') === JSON.stringify(fg.get('password').value) ) {
+    if ( this.storage.get('USER_NAME') === fg.get('userName').value  &&
+                 this.storage.get('PASSWORD') === fg.get('password').value ) {
       return true;
     }
     return false;

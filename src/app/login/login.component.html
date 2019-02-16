@@ -1,18 +1,34 @@
-<h2> Login </h2>
-<div class="invalidCredentials" [hidden]="invalidCredentials == null">{{invalidCredentials}}</div>
-<form [formGroup]="userLoginForm" (ngSubmit)="checkValidUser()">
-  <div class="form-group">
-    <label for="userName">User Name</label>
-    <input type="text" formControlName="userName" class="form-control"/>
-    <app-control-messages [control]="f.userName"></app-control-messages>
-  </div>
-  <div class="form-group">
-    <label for="password">Password</label>
-    <input type="text" formControlName="password" class="form-control"/>
-    <app-control-messages [control]="f.password"></app-control-messages>
-  </div>
-  <div class="form-group">
-    <button class="btn btn-primary" [disabled]="userLoginForm.invalid" i>Login</button>
+<div id="login-box">
+
+  <div class="left-box">
+    <h1><b> Sign In </b></h1>
+
+      <div class="invalidCredentials" [hidden]="invalidCredentials == null">{{invalidCredentials}}</div>
+
+      <form [formGroup]="userLoginForm" (ngSubmit)="checkValidUser()">
+
+        <div class="form-group is-invalid ">
+          <input type="text" formControlName="userName" class="form-control is-invalid " placeholder="User Name"/>
+          <app-control-messages [control]="f.userName" class="invalid-feedback"></app-control-messages>
+        </div>
+
+        <div class="form-group is-invalid ">
+          <input type="password" formControlName="password" class="form-control is-invalid " placeholder="Password"/>
+          <app-control-messages [control]="f.password" class="invalid-feedback"></app-control-messages>
+        </div>
+
+        <div class="form-group">
+          <button class="btn btn-primary" [disabled]="userLoginForm.invalid" >Login</button>
+        </div>
+
+      </form>
+
+    <label class="registerLabel">Don't have an Account? Create it now </label>
     <a routerLink="/register" class="btn btn-link">Register</a>
+
   </div>
-</form>
+
+</div>
+
+
+
