@@ -32,16 +32,16 @@ Developing an Angular application for viewing calorie and weight details for a g
 ![](https://github.com/sindhusha-t/Search-Recipe-App/raw/master/screenshots/Registration%20button%20enabled.png)
 
 ### Login Page:
-![](https://github.com/sindhusha-t/Search-Recipe-App/blob/master/screenshots/Login.png)
+![](https://github.com/sindhusha-t/Search-Recipe-App/raw/master/screenshots/Login.png)
 2) Login with Validation
-![](https://github.com/sindhusha-t/Search-Recipe-App/blob/master/screenshots/Login%20with%20validations.png)
+![](https://github.com/sindhusha-t/Search-Recipe-App/raw/master/screenshots/Login%20with%20validations.png)
 
 ### Home Page:
-![](https://github.com/sindhusha-t/Search-Recipe-App/blob/master/screenshots/Home.png)
+![](https://github.com/sindhusha-t/Search-Recipe-App/raw/master/screenshots/Home.png)
 2) Search Recipe Page:
-![](https://github.com/sindhusha-t/Search-Recipe-App/blob/master/screenshots/Recipe%20Search.png)
+![](https://github.com/sindhusha-t/Search-Recipe-App/raw/master/screenshots/Recipe%20Search.png)
 3) Search with Validation:
-![](https://github.com/sindhusha-t/Search-Recipe-App/blob/master/screenshots/Search%20Validation.png)
+![](https://github.com/sindhusha-t/Search-Recipe-App/raw/master/screenshots/Search%20Validation.png)
 
 # Issues/Limitations:
 1) The API URL-2 given in the assignment seems to not work. So we used a different free API service for the functionality to work.
